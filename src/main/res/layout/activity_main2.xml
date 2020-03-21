@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Main2Activity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -14,20 +14,22 @@
             android:id="@+id/btnPrimera"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/TextView01"
             android:layout_alignParentLeft="true"
-            android:text="Segunda" />
-
+            android:layout_below="@+id/TextView01"
+            android:layout_marginLeft="65dp"
+            android:layout_marginTop="38dp"
+            android:text="Primera Activity" />
         <TextView
             android:id="@+id/TextView01"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/btnPrimera"
             android:layout_alignParentTop="true"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="27dp"
             android:minHeight="60dip"
-            android:text="Primer Activity"
+            android:text="Segunda Activity"
             android:textSize="20sp" />
+
     </RelativeLayout>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
