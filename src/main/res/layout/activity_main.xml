@@ -1,41 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    tools:context="MainActivity">
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal"
+        android:textSize="22dp"
+        android:text="Radio button simples" />
+    <!-- Default RadioButtons -->
+    <RadioButton
+        android:id="@+id/radioButton1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Radio Button 1"
 
-<CheckBox
-    android:id="@+id/checkbox1"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_alignParentLeft="true"
-    android:layout_alignParentTop="true"
-    android:text="Pizza"/>
-
-    <CheckBox
-        android:id="@+id/checkbox2"
+    android:layout_marginTop="20dp"
+    android:textSize="20dp" />
+    <RadioButton
+        android:id="@+id/radioButton2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Radio Button 2"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp" />
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="#B8B894" />
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal"
+        android:textSize="22dp"
+        android:text="Radio button dentro de un RadioGroup" />
+    <!-- Customized RadioButtons -->
+    <RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@id/checkbox1"
-        android:text="Cafe"/>
+        android:id="@+id/radioGroup">
+        <RadioButton
+            android:id="@+id/radioH"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Hombre"
+            android:layout_marginTop= "10dp"
+            android:checked="false"
+            android:textSize="20dp" />
+        <RadioButton
+            android:id="@+id/radioM"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Mujer"
+            android:layout_marginTop= "20dp"
+            android:checked="false"
+            android:textSize="20dp" />
+    </RadioGroup>
 
-    <CheckBox
-        android:id="@+id/checkbox3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@id/checkbox2"
-        android:text="Hamburguesa"/>
     <Button
-        android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_below="@id/checkbox2"
-        android:layout_toLeftOf="@id/checkbox3"
-        android:text="Ordenar"/>
-
-</RelativeLayout>
+        android:text="Show Selected"
+        android:id="@+id/button"
+        android:onClick="onclickbuttonMethod"
+        android:layout_gravity="center_horizontal" />
+</LinearLayout>
